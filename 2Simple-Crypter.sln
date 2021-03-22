@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2Simple-Crypter", "2Simple-Crypter\2Simple-Crypter.csproj", "{FB235E27-38E1-432A-B405-B5872AAFB4CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB235E27-38E1-432A-B405-B5872AAFB4CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB235E27-38E1-432A-B405-B5872AAFB4CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB235E27-38E1-432A-B405-B5872AAFB4CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB235E27-38E1-432A-B405-B5872AAFB4CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69CFC432-201C-4D42-B4AF-77ED4EDFFD8F}
+	EndGlobalSection
+EndGlobal
