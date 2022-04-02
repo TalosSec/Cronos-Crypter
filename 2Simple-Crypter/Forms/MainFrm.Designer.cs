@@ -451,6 +451,7 @@ namespace _2Simple_Crypter
             // buildBtn
             // 
             this.buildBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buildBtn.Enabled = false;
             this.buildBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buildBtn.ForeColor = System.Drawing.Color.White;
             this.buildBtn.Location = new System.Drawing.Point(359, 629);

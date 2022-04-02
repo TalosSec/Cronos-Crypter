@@ -74,7 +74,19 @@ namespace _2Simple_Crypter
         // Browse payload
         private void browsePayloadBtn_Click(object sender, EventArgs e)
         {
-
+            using (var ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Executable (*.exe)|*.exe";
+                if(ofd.ShowDialog() == DialogResult.OK)
+                {
+                    payloadTxt.Text = ofd.FileName;
+                    buildBtn.Enabled = true;
+                }
+                else
+                {
+                    buildBtn.Enabled = false;
+                }
+            }
         }
         #endregion
 
