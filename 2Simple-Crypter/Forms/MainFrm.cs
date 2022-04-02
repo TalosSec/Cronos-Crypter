@@ -88,6 +88,17 @@ namespace _2Simple_Crypter
                 }
             }
         }
+        // Build payload 
+        private void buildBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Change assembly of a file
+        private void assemblyBtn_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
         #region Code
@@ -95,7 +106,7 @@ namespace _2Simple_Crypter
         /// <summary>
         /// This region contains the code, mostly needed for the UI but also stuff like obfuscate
         /// </summary>
-       
+
         // Enables/Disables textboxes, comboboxes etc. for schtasks
         private void schtasksBox_CheckedChanged(object sender, EventArgs e)
         {

@@ -460,6 +460,7 @@ namespace _2Simple_Crypter
             this.buildBtn.TabIndex = 31;
             this.buildBtn.Text = "Build";
             this.buildBtn.UseVisualStyleBackColor = false;
+            this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
             // 
             // assemblyBtn
             // 
@@ -472,6 +473,7 @@ namespace _2Simple_Crypter
             this.assemblyBtn.TabIndex = 32;
             this.assemblyBtn.Text = "Assembly";
             this.assemblyBtn.UseVisualStyleBackColor = false;
+            this.assemblyBtn.Click += new System.EventHandler(this.assemblyBtn_Click);
             // 
             // sleepNum
             // 

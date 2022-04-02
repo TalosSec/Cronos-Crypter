@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2Simple_Crypter.Builder
+namespace Stub
 {
-    public class Builder
-    { 
-        
+    static class Stub
+    {
+        public static void Main()
+        {
+            // to do
+        }
     }
 }
