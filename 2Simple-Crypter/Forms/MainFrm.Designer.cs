@@ -182,6 +182,7 @@ namespace _2Simple_Crypter
             this.browsePayloadBtn.TabIndex = 7;
             this.browsePayloadBtn.Text = "Browse";
             this.browsePayloadBtn.UseVisualStyleBackColor = false;
+            this.browsePayloadBtn.Click += new System.EventHandler(this.browsePayloadBtn_Click);
             // 
             // label4
             // 
