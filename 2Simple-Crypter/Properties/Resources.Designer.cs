@@ -79,5 +79,14 @@ namespace _2Simple_Crypter.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu .
+        /// </summary>
+        internal static string Stub {
+            get {
+                return ResourceManager.GetString("Stub", resourceCulture);
+            }
+        }
     }
 }

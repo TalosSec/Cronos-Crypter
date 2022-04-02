@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using System;
 
-namespace Stub
-{
-    static class Stub
-    {
-        public static void Main()
-        {
-            // to do
-        }
-    }
-}
+//namespace Stub
+//{
+//    static class Stub
+//    {
+//        public static void Main()
+//        {
+//            // to do
+//        }
+//    }
+//}

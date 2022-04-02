@@ -16,6 +16,8 @@ namespace _2Simple_Crypter.Core
         public string decryptKey;
         public string stubResources;
         public string encryptedPayload;
+        public string injectionType;
+        public EncryptionType encryptionType;
 
         // Startup
 
@@ -29,6 +31,6 @@ namespace _2Simple_Crypter.Core
         public bool doInstall;
 
         // Assembly cloner
-        // In maintence
+        public Assembly assemblyInfo;
     }
 }

@@ -10,7 +10,7 @@ namespace _2Simple_Crypter.Core
 {
     public class Encryption
     {
-        public byte[] Encrypt(byte[] payload, EncryptionType encryption, char[] key)
+        public static byte[] Encrypt(byte[] payload, EncryptionType encryption, string key)
         {
             byte[] encrypted;
 
@@ -26,7 +26,7 @@ namespace _2Simple_Crypter.Core
             return encrypted;
         }
 
-        private byte[] AES_Encrypt(byte[] bytesToBeEncrypted, char[] encKey)
+        private static byte[] AES_Encrypt(byte[] bytesToBeEncrypted, string encKey)
         {
             byte[] encryptedBytes = null;
             byte[] saltBytes = new byte[] { 026, 020, 202, 234, 136, 123, 069, 047 };
@@ -52,7 +52,7 @@ namespace _2Simple_Crypter.Core
             return encryptedBytes;
         }
 
-        private byte[] XOR_Encrypt(byte[] bytesToBeEncrypted, char[]key)
+        private static byte[] XOR_Encrypt(byte[] bytesToBeEncrypted, string key)
         {
             byte[] encryptedBytes = new byte[bytesToBeEncrypted.Length];
 
