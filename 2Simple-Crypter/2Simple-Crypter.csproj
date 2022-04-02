@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Settings.cs" />
     <Compile Include="Forms\MainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +82,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\" />
+    <Folder Include="Builder\" />
+    <Folder Include="Obfuscator\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close-button.png" />
