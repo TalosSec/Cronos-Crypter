@@ -61,9 +61,11 @@ namespace _2Simple_Crypter
             this.sleepChk = new System.Windows.Forms.CheckBox();
             this.buildBtn = new System.Windows.Forms.Button();
             this.assemblyBtn = new System.Windows.Forms.Button();
+            this.sleepNum = new System.Windows.Forms.NumericUpDown();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sleepNum)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,6 +81,7 @@ namespace _2Simple_Crypter
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.sleepNum);
             this.topPanel.Controls.Add(this.assemblyBtn);
             this.topPanel.Controls.Add(this.buildBtn);
             this.topPanel.Controls.Add(this.sleepChk);
@@ -460,6 +463,17 @@ namespace _2Simple_Crypter
             this.assemblyBtn.Text = "Assembly";
             this.assemblyBtn.UseVisualStyleBackColor = false;
             // 
+            // sleepNum
+            // 
+            this.sleepNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.sleepNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sleepNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sleepNum.ForeColor = System.Drawing.Color.White;
+            this.sleepNum.Location = new System.Drawing.Point(307, 556);
+            this.sleepNum.Name = "sleepNum";
+            this.sleepNum.Size = new System.Drawing.Size(120, 22);
+            this.sleepNum.TabIndex = 33;
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,6 +489,7 @@ namespace _2Simple_Crypter
             this.topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sleepNum)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -513,6 +528,7 @@ namespace _2Simple_Crypter
         private System.Windows.Forms.CheckBox antiVM;
         private System.Windows.Forms.Button assemblyBtn;
         private System.Windows.Forms.Button buildBtn;
+        private System.Windows.Forms.NumericUpDown sleepNum;
     }
 }
 
