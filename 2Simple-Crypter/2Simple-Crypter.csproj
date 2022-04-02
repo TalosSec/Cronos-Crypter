@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Assembly.cs" />
     <Compile Include="Core\Settings.cs" />
     <Compile Include="Forms\MainFrm.cs">
       <SubType>Form</SubType>
