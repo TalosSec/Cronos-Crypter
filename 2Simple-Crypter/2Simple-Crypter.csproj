@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builder\Builder.cs" />
     <Compile Include="Core\Assembly.cs" />
+    <Compile Include="Core\Encryption.cs" />
+    <Compile Include="Core\EncryptionType.cs" />
     <Compile Include="Core\Settings.cs" />
     <Compile Include="Forms\MainFrm.cs">
       <SubType>Form</SubType>
@@ -54,6 +57,7 @@
     <Compile Include="Forms\MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Obfuscator\Randomize.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\MainFrm.resx">
@@ -82,10 +86,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Builder\" />
-    <Folder Include="Obfuscator\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\close-button.png" />
   </ItemGroup>
