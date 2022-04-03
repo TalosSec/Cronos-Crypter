@@ -14,6 +14,10 @@
 
 ## Features
 
+<div align="center">
+  <img src="https://github.com/XaFF-XaFF/Cronos-Crypter/blob/master/img/Cronos.png"></img>
+</div>
+
 ## Disclaimer
 
 The creators are not responsible for any actions or other damages caused, by this software.
@@ -24,4 +28,5 @@ By downloading and using this software, you agree to above disclaimer
 ## License
 
 [MIT License](https://github.com/XaFF-XaFF/Cronos-Crypter/blob/master/LICENSE)
+<br/>
 Copyright (c) 2022 Talos
