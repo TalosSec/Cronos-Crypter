@@ -14,6 +14,7 @@
 
 ## Features
 - AES256 and XOR encryption
+- RegAsm or Itself process hollowing
 - Scheduled tasks and registry startup
 - Simple obfuscator
 - Assembly cloner (In maintenance)
