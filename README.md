@@ -35,7 +35,9 @@
  AntiVM (In maintenance)
   <br/>
  
-
+## Requirements
+  dnlib https://github.com/0xd4d/dnlib#windows-pdbs
+  
 ## Disclaimer
 
 The creators are not responsible for any actions or other damages caused, by this software.
