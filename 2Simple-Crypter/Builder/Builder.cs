@@ -1,5 +1,5 @@
-﻿using _2Simple_Crypter.Core;
-using _2Simple_Crypter.Obfuscator;
+﻿using CronosCrypter.Core;
+using CronosCrypter.Obfuscator;
 using Microsoft.CSharp;
 using System;
 using System.CodeDom.Compiler;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _2Simple_Crypter.Builder
+namespace CronosCrypter.Builder
 {
     class Builder
     {

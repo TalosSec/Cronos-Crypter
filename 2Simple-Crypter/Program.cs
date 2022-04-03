@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _2Simple_Crypter
+namespace CronosCrypter
 {
     static class Program
     {

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2Simple-Crypter", "2Simple-Crypter\2Simple-Crypter.csproj", "{FB235E27-38E1-432A-B405-B5872AAFB4CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cronos-Crypter", "2Simple-Crypter\Cronos-Crypter.csproj", "{FB235E27-38E1-432A-B405-B5872AAFB4CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

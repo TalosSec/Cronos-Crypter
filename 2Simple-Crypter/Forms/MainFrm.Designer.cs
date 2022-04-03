@@ -1,5 +1,5 @@
 ﻿
-namespace _2Simple_Crypter
+namespace CronosCrypter
 {
     partial class MainFrm
     {
@@ -477,7 +477,7 @@ namespace _2Simple_Crypter
             // 
             // exitBox
             // 
-            this.exitBox.Image = global::_2Simple_Crypter.Properties.Resources.close_button;
+            this.exitBox.Image = global::CronosCrypter.Properties.Resources.close_button;
             this.exitBox.Location = new System.Drawing.Point(415, 9);
             this.exitBox.Name = "exitBox";
             this.exitBox.Size = new System.Drawing.Size(25, 25);
@@ -487,7 +487,7 @@ namespace _2Simple_Crypter
             // 
             // minimizeBox
             // 
-            this.minimizeBox.Image = global::_2Simple_Crypter.Properties.Resources.minus_sign;
+            this.minimizeBox.Image = global::CronosCrypter.Properties.Resources.minus_sign;
             this.minimizeBox.Location = new System.Drawing.Point(384, 9);
             this.minimizeBox.Name = "minimizeBox";
             this.minimizeBox.Size = new System.Drawing.Size(25, 25);

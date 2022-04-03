@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _2Simple_Crypter.Forms
+namespace CronosCrypter.Forms
 {
     public partial class AssemblyFrm : Form
     {

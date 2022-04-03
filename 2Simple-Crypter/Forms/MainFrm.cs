@@ -1,5 +1,5 @@
-﻿using _2Simple_Crypter.Core;
-using _2Simple_Crypter.Obfuscator;
+﻿using CronosCrypter.Core;
+using CronosCrypter.Obfuscator;
 using dnlib.DotNet;
 using dnlib.DotNet.Writer;
 using System;
@@ -14,7 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _2Simple_Crypter
+namespace CronosCrypter
 {
     public partial class MainFrm : Form
     {
