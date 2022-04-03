@@ -129,6 +129,10 @@ namespace CronosCrypter
                         settings.doInstall = true;
                         settings.doSchtasks = true;
                     }
+                    if(sleepChk.CheckState == CheckState.Checked)
+                    {
+                        settings.doSleep = true;
+                    }
 
                     settings.buildDirectory = selectSaveDialog.FileName;
                                       
@@ -137,7 +141,7 @@ namespace CronosCrypter
                     CallObfuscator(selectSaveDialog);
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
-                    File.Delete(selectSaveDialog.FileName);
+                    //File.Delete(selectSaveDialog.FileName);
                     
 
                 }
@@ -176,6 +180,9 @@ namespace CronosCrypter
             settings.specialDir = specialBox.Text;
             settings.regeditName = regeditNameTxt.Text;
             settings.schtasksName = schtasksNameTxt.Text;
+
+            // Settings
+            settings.sleep = (int)sleepNum.Value;
 
             object bld = null;
             var thread = new Thread(() =>

