@@ -24,6 +24,8 @@
   <br/>
  Scheduled tasks and registry startup
   <br/>
+ Execution delay
+  <br/>
  Simple obfuscator
   <br/>
  Assembly cloner (In maintenance)
@@ -32,9 +34,10 @@
   <br/>
  AntiVM (In maintenance)
   <br/>
- Execution delay (In maintenance)
-  <br/>
-
+ 
+## Requirements
+  dnlib https://github.com/0xd4d/dnlib#windows-pdbs
+  
 ## Disclaimer
 
 The creators are not responsible for any actions or other damages caused, by this software.
