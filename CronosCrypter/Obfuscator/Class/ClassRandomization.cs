@@ -1,4 +1,5 @@
 ﻿using dnlib.DotNet;
+using dnlib.DotNet.Emit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -101,6 +102,35 @@ namespace CronosCrypter.Obfuscator.Class
                     if (method.IsConstructor) continue;
                     method.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15);
                 }
+
+
+                #region String obfuscation
+                /// <summary>
+                /// Adds Convert.ToBase64Encode() in front of a string.
+                /// </summary>
+                foreach (MethodDef strings in type.Methods)
+                {
+                    if (!strings.HasBody) continue;
+                    for (int i = 0; i < strings.Body.Instructions.Count(); i++)
+                    {
+
+                        if (strings.Body.Instructions[i].OpCode == OpCodes.Ldstr)
+                        {
+                            // c# variable has for loop scope only
+                            String regString = strings.Body.Instructions[i].Operand.ToString();
+                            String encString = Convert.ToBase64String(UTF8Encoding.UTF8.GetBytes(regString));
+                            Console.WriteLine($"{regString} -> {encString}");
+                            // methodology for adding code: write it in plain c#, compile, then view IL in dnspy
+                            strings.Body.Instructions[i].OpCode = OpCodes.Nop; // errors occur if instruction not replaced with Nop
+                            strings.Body.Instructions.Insert(i + 1, new Instruction(OpCodes.Call, module.Import(typeof(System.Text.Encoding).GetMethod("get_UTF8", new Type[] { })))); // Load string onto stack
+                            strings.Body.Instructions.Insert(i + 2, new Instruction(OpCodes.Ldstr, encString)); // Load string onto stack
+                            strings.Body.Instructions.Insert(i + 3, new Instruction(OpCodes.Call, module.Import(typeof(System.Convert).GetMethod("FromBase64String", new Type[] { typeof(string) })))); // call method FromBase64String with string parameter loaded from stack, returned value will be loaded onto stack
+                            strings.Body.Instructions.Insert(i + 4, new Instruction(OpCodes.Callvirt, module.Import(typeof(System.Text.Encoding).GetMethod("GetString", new Type[] { typeof(byte[]) })))); // call method GetString with bytes parameter loaded from stack 
+                            i += 4; //skip the Instructions as to not recurse on them
+                        }
+                    }
+                }
+                #endregion
 
                 #endregion
 
