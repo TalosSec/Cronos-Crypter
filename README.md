@@ -13,6 +13,13 @@
 
 
 ## Features
+- AES256 and XOR encryption
+- Scheduled tasks and registry startup
+- Simple obfuscator
+- Assembly cloner (In maintenance)
+- AMSI Bypass (In maintenance)
+- AntiVM (In maintenance)
+- Execution delay (In maintenance)
 
 <div align="center">
   <img src="https://github.com/XaFF-XaFF/Cronos-Crypter/blob/master/img/Cronos.png"></img>
