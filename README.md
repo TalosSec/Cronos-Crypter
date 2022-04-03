@@ -6,25 +6,34 @@
     This application allows you to encrypt your payload to decrease scanners detection.</h4>
 </div>
 
-## Authors
-
-- Ajajjajk - Aries52
-- XaFF - XaFF
-
-
-## Features
-- AES256 and XOR encryption
-- RegAsm or Itself process hollowing
-- Scheduled tasks and registry startup
-- Simple obfuscator
-- Assembly cloner (In maintenance)
-- AMSI Bypass (In maintenance)
-- AntiVM (In maintenance)
-- Execution delay (In maintenance)
+<div align="center">
+  <h2>Authors</h2>
+    Ajajjajk - Aries52
+  <br/>
+    XaFF - XaFF
+</div>
 
 <div align="center">
-  <img src="https://github.com/XaFF-XaFF/Cronos-Crypter/blob/master/img/Cronos.png"></img>
+  <h2>Features</h2>
+  <img src="https://github.com/XaFF-XaFF/Cronos-Crypter/blob/master/img/Cronos.png"></img
 </div>
+  
+  AES256 and XOR encryption
+  <br/>
+ RegAsm or Itself process hollowing
+  <br/>
+ Scheduled tasks and registry startup
+  <br/>
+ Simple obfuscator
+  <br/>
+ Assembly cloner (In maintenance)
+  <br/>
+ AMSI Bypass (In maintenance)
+  <br/>
+ AntiVM (In maintenance)
+  <br/>
+ Execution delay (In maintenance)
+  <br/>
 
 ## Disclaimer
 
