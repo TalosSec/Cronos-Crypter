@@ -17,6 +17,7 @@ namespace _2Simple_Crypter.Core
         public string stubResources;
         public string encryptedPayload;
         public string injectionType;
+        public string injectionName;
         public EncryptionType encryptionType;
 
         // Startup
