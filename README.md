@@ -24,6 +24,8 @@
   <br/>
  Scheduled tasks and registry startup
   <br/>
+ Execution delay
+  <br/>
  Simple obfuscator
   <br/>
  Assembly cloner (In maintenance)
@@ -32,8 +34,7 @@
   <br/>
  AntiVM (In maintenance)
   <br/>
- Execution delay (In maintenance)
-  <br/>
+ 
 
 ## Disclaimer
 
