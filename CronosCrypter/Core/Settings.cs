@@ -34,6 +34,7 @@ namespace CronosCrypter.Core
         // Settings
         public int sleep;
         public bool doSleep;
+        public bool doAntiVM;
 
         // Assembly cloner
         public Assembly assemblyInfo;

