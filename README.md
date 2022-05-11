@@ -32,7 +32,7 @@
   <br/>
  AMSI Bypass (In maintenance)
   <br/>
- AntiVM (In maintenance)
+ AntiVM
   <br/>
  
 ## Requirements
