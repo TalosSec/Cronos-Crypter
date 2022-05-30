@@ -12,6 +12,14 @@ using System.Windows.Forms;
 
 namespace CronosCrypter.Builder
 {
+    /// <summary>
+    /// Due to the theft of full repository and authors changes I add this note
+    /// I remind you that, this program is working on MIT License, so you can use, modify this program etc. but please leave credits to original authors.
+    /// Original Authors are Ajajjajk (Aries52) and XaFF
+    /// 
+    /// https://github.com/TalosSec/Cronos-Crypter
+    /// This program is written for educational purposes and We, Authors, do not take responsibility for and damages caused by this software!
+    /// </summary>
     class Builder
     {
         private Settings _settings;

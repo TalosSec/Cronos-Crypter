@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace CronosCrypter.Forms
 {
+    /// <summary>
+    /// Assembly form allows user to change its file assembly.
+    /// </summary>
     public partial class AssemblyFrm : Form
     {
         public AssemblyFrm()
