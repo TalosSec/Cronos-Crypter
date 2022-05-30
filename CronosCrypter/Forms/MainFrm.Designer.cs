@@ -62,6 +62,7 @@ namespace CronosCrypter
             this.label2 = new System.Windows.Forms.Label();
             this.exitBox = new System.Windows.Forms.PictureBox();
             this.minimizeBox = new System.Windows.Forms.PictureBox();
+            this.TalosSec = new System.Windows.Forms.LinkLabel();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sleepNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
@@ -81,6 +82,7 @@ namespace CronosCrypter
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.TalosSec);
             this.topPanel.Controls.Add(this.sleepNum);
             this.topPanel.Controls.Add(this.assemblyBtn);
             this.topPanel.Controls.Add(this.buildBtn);
@@ -500,6 +502,17 @@ namespace CronosCrypter
             this.minimizeBox.TabStop = false;
             this.minimizeBox.Click += new System.EventHandler(this.minimizeBox_Click);
             // 
+            // TalosSec
+            // 
+            this.TalosSec.AutoSize = true;
+            this.TalosSec.Location = new System.Drawing.Point(4, 31);
+            this.TalosSec.Name = "TalosSec";
+            this.TalosSec.Size = new System.Drawing.Size(52, 13);
+            this.TalosSec.TabIndex = 34;
+            this.TalosSec.TabStop = true;
+            this.TalosSec.Text = "TalosSec";
+            this.TalosSec.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TalosSec_LinkClicked);
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,6 +568,7 @@ namespace CronosCrypter
         private System.Windows.Forms.Button assemblyBtn;
         private System.Windows.Forms.Button buildBtn;
         private System.Windows.Forms.NumericUpDown sleepNum;
+        private System.Windows.Forms.LinkLabel TalosSec;
     }
 }
 

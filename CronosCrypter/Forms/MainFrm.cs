@@ -302,5 +302,10 @@ namespace CronosCrypter
             }
         }
         #endregion
+
+        private void TalosSec_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TalosSec");
+        }
     }
 }
