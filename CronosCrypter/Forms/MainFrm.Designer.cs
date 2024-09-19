@@ -31,6 +31,7 @@ namespace CronosCrypter
         {
             this.label1 = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.TalosSec = new System.Windows.Forms.LinkLabel();
             this.sleepNum = new System.Windows.Forms.NumericUpDown();
             this.assemblyBtn = new System.Windows.Forms.Button();
             this.buildBtn = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@ namespace CronosCrypter
             this.label2 = new System.Windows.Forms.Label();
             this.exitBox = new System.Windows.Forms.PictureBox();
             this.minimizeBox = new System.Windows.Forms.PictureBox();
-            this.TalosSec = new System.Windows.Forms.LinkLabel();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sleepNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
@@ -124,6 +124,17 @@ namespace CronosCrypter
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
             this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
             this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
+            // 
+            // TalosSec
+            // 
+            this.TalosSec.AutoSize = true;
+            this.TalosSec.Location = new System.Drawing.Point(4, 31);
+            this.TalosSec.Name = "TalosSec";
+            this.TalosSec.Size = new System.Drawing.Size(52, 13);
+            this.TalosSec.TabIndex = 34;
+            this.TalosSec.TabStop = true;
+            this.TalosSec.Text = "TalosSec";
+            this.TalosSec.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TalosSec_LinkClicked);
             // 
             // sleepNum
             // 
@@ -501,17 +512,6 @@ namespace CronosCrypter
             this.minimizeBox.TabIndex = 1;
             this.minimizeBox.TabStop = false;
             this.minimizeBox.Click += new System.EventHandler(this.minimizeBox_Click);
-            // 
-            // TalosSec
-            // 
-            this.TalosSec.AutoSize = true;
-            this.TalosSec.Location = new System.Drawing.Point(4, 31);
-            this.TalosSec.Name = "TalosSec";
-            this.TalosSec.Size = new System.Drawing.Size(52, 13);
-            this.TalosSec.TabIndex = 34;
-            this.TalosSec.TabStop = true;
-            this.TalosSec.Text = "TalosSec";
-            this.TalosSec.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TalosSec_LinkClicked);
             // 
             // MainFrm
             // 

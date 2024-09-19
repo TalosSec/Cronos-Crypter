@@ -1,4 +1,5 @@
 ﻿using CronosCrypter.Core;
+using CronosCrypter.Forms;
 using CronosCrypter.Obfuscator;
 using dnlib.DotNet;
 using dnlib.DotNet.Writer;
@@ -162,7 +163,13 @@ namespace CronosCrypter
         // Change assembly of a file
         private void assemblyBtn_Click(object sender, EventArgs e)
         {
-
+            using (AssemblyFrm assemblyForm = new AssemblyFrm(settings.assemblyInfo))
+            {
+                if (assemblyForm.ShowDialog() == DialogResult.OK)
+                {
+                    settings.assemblyInfo = assemblyForm._assemblySettings;
+                }
+            }
         }
         #endregion
 

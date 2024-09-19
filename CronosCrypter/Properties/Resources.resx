@@ -152,6 +152,17 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
+[assembly: AssemblyTitle("#AssemblyProduct")]
+[assembly: AssemblyDescription("#AssemblyDescription")]
+[assembly: AssemblyCompany("#AssemblyProduct")]
+[assembly: AssemblyProduct("#AssemblyProduct")]
+[assembly: AssemblyCopyright("#AssemblyCopyright")]
+[assembly: AssemblyTrademark("#AssemblyTrademark")]
+[assembly: AssemblyVersion("#AssemblyVersion")]
+[assembly: AssemblyFileVersion("#AssemblyVersion")]
+[assembly: Guid("#Guid")]
+[assembly: ComVisible(false)]
+
 namespace Stub
 {
     /// &lt;summary&gt;
