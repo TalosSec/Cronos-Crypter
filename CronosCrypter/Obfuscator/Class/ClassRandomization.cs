@@ -15,6 +15,9 @@ namespace CronosCrypter.Obfuscator.Class
 
             /// <summary>
             /// Very simple class randomization obfuscator, based on dnlib
+            /// 
+            /// 
+            /// Had to change assembly name to random ones.
             /// </summary>
 
             #region Randomizing names
@@ -23,8 +26,8 @@ namespace CronosCrypter.Obfuscator.Class
             /// Changes names of classes and other names
             /// </summary>
 
-            module.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15);
-            module.EntryPoint.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15);
+            module.Name = Randomize.RandomCharacters(15);
+            module.EntryPoint.Name = Randomize.RandomCharacters(15);
             module.EncBaseId = Guid.NewGuid();
             module.EncId = Guid.NewGuid();
             module.Mvid = Guid.NewGuid();
@@ -40,7 +43,7 @@ namespace CronosCrypter.Obfuscator.Class
             foreach (var type in module.GetTypes())
             {
                 type.Namespace = string.Empty; // Hides namespace of project
-                type.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15); // Randomizes name of classes
+                type.Name = Randomize.RandomCharacters(15); // Randomizes name of classes
             }
 
             #endregion
@@ -57,7 +60,7 @@ namespace CronosCrypter.Obfuscator.Class
                 {
                     foreach (ParamDef param in paramMethod.ParamDefs)
                     {
-                        param.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15); // Randomizes Name of project
+                        param.Name = Randomize.RandomCharacters(15); // Randomizes Name of project
                     }
                 }
 
@@ -70,7 +73,7 @@ namespace CronosCrypter.Obfuscator.Class
 
                 foreach (EventDef @event in type.Events)
                 {
-                    @event.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15);
+                    @event.Name = Randomize.RandomCharacters(15);
                 }
 
                 #endregion
@@ -83,7 +86,7 @@ namespace CronosCrypter.Obfuscator.Class
 
                 foreach (FieldDef field in type.Fields)
                 {
-                    field.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15);
+                    field.Name = Randomize.RandomCharacters(15);
                 }
 
                 #endregion
@@ -100,7 +103,7 @@ namespace CronosCrypter.Obfuscator.Class
                     if (!method.HasBody) continue;
 
                     if (method.IsConstructor) continue;
-                    method.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15);
+                    method.Name = Randomize.RandomCharacters(15);
                 }
 
 
@@ -140,7 +143,11 @@ namespace CronosCrypter.Obfuscator.Class
                 /// Changes names of assemblies
                 /// </summary>
 
-                module.Assembly.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15);
+                // User can add his own assembly name, by editing this section below
+                // here is an example:
+                // module.Assembly.Name = "Cronos-Crypter" + Randomize.RandomCharacters(15);
+
+                module.Assembly.Name = Randomize.RandomCharacters(15);
 
 
                 string[] attri = { "AssemblyVersionAttribute", "AssemblyDescriptionAttribute",
@@ -153,7 +160,7 @@ namespace CronosCrypter.Obfuscator.Class
                 {
                     if (attri.Any(attribute.AttributeType.Name.Contains))
                     {
-                        string encAttri = "Cronos-Crypter" + Randomize.RandomCharacters(15);
+                        string encAttri = Randomize.RandomCharacters(15);
 
                         attribute.ConstructorArguments[0] = new CAArgument(module.CorLibTypes.String, new UTF8String(encAttri));
                     }
