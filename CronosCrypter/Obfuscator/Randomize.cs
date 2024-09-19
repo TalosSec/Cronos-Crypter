@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +22,18 @@ namespace CronosCrypter.Obfuscator
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
-        
+
+        public static byte[] RandomBytes(int length)
+        {
+            byte[] array = new byte[length];
+
+            using (RandomNumberGenerator rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(array);
+            }
+
+            return array;
+
+        }
     }
 }

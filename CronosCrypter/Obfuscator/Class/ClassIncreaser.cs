@@ -14,10 +14,9 @@ namespace CronosCrypter.Obfuscator.Class
         {
             /// <summary>
             /// Very simple obfuscator that increases the number of classes with Console.WriteLine() in method.
-            /// Maybe in the future it will have calculations in the method
-            /// 
             /// 
             /// Had to change assembly name to random ones.
+            /// Added random arithmetic operations (Add, Sub, Mul) between two arguments a and b, which are passed to each generated method.
             /// </summary>
 
 
@@ -38,6 +37,7 @@ namespace CronosCrypter.Obfuscator.Class
                     MethodSig.CreateStatic(module.CorLibTypes.Void, module.CorLibTypes.String, module.CorLibTypes.Object), systemConsole);
 
                 var field1 = new FieldDefUser(Randomize.RandomCharacters(20), new FieldSig(module.CorLibTypes.Int32), FieldAttributes.Public | FieldAttributes.Static);
+
                 var methImplFlags = MethodImplAttributes.IL | MethodImplAttributes.Managed;
                 var methFlags = MethodAttributes.Public | MethodAttributes.Static | MethodAttributes.HideBySig | MethodAttributes.ReuseSlot;
                 var method1 = new MethodDefUser(Randomize.RandomCharacters(20),
@@ -52,15 +52,21 @@ namespace CronosCrypter.Obfuscator.Class
                 junkAttribute.Fields.Add(field1);
 
                 method1.Body = body;
-                method1.ParamDefs.Add(new ParamDefUser(Randomize.RandomCharacters(20)));
-                body.Instructions.Add(OpCodes.Ldarg_0.ToInstruction());
-                body.Instructions.Add(OpCodes.Call.ToInstruction(bctor));
+                method1.ParamDefs.Add(new ParamDefUser("a"));
+                method1.ParamDefs.Add(new ParamDefUser("b"));
+
+                body.Instructions.Add(OpCodes.Ldarg_0.ToInstruction());  
+                body.Instructions.Add(OpCodes.Ldarg_1.ToInstruction());  
+
+                var operations = new OpCode[] { OpCodes.Add, OpCodes.Sub, OpCodes.Mul };
+                var randomOp = operations[new Random().Next(operations.Length)];
+
+                body.Instructions.Add(randomOp.ToInstruction());
+                body.Instructions.Add(OpCodes.Stsfld.ToInstruction(field1));
                 body.Instructions.Add(OpCodes.Ldstr.ToInstruction(Randomize.RandomCharacters(20)));
                 body.Instructions.Add(OpCodes.Ldsfld.ToInstruction(field1));
-                body.Instructions.Add(OpCodes.Ldnull.ToInstruction());
                 body.Instructions.Add(OpCodes.Call.ToInstruction(writeLine));
                 body.Instructions.Add(OpCodes.Ret.ToInstruction());
-
             }
         }
     }
