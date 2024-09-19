@@ -29,7 +29,9 @@ namespace CronosCrypter.Core
         private static byte[] AES_Encrypt(byte[] bytesToBeEncrypted, string encKey)
         {
             byte[] encryptedBytes = null;
-            byte[] saltBytes = new byte[] { 026, 020, 202, 234, 136, 123, 069, 047 };
+
+            // TODO: Add random saltbytes generator
+            byte[] saltBytes = new byte[] { 054, 022, 153, 017 , 088, 055, 112, 212};
             using (MemoryStream ms = new MemoryStream())              
             {
                 using (RijndaelManaged AES = new RijndaelManaged())
