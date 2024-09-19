@@ -28,7 +28,7 @@
   <br/>
  Simple obfuscator
   <br/>
- Assembly cloner (In maintenance)
+ Assembly cloner
   <br/>
  AMSI Bypass (In maintenance)
   <br/>
