@@ -37,6 +37,7 @@
  
 ## Requirements
   dnlib https://github.com/0xd4d/dnlib#windows-pdbs
+  IconExtractor https://github.com/jsakamoto/IconExtractor
   
 ## Disclaimer
 
