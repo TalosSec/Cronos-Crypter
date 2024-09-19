@@ -1,4 +1,5 @@
 ﻿using CronosCrypter.Obfuscator.Class;
+using CronosCrypter.Obfuscator.String;
 using dnlib.DotNet;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace CronosCrypter.Obfuscator
     {
         public void Execute(ModuleDefMD module)
         {
+            StringSplitter.Execute(module);
             ClassRandomization.Execute(module);
             ClassIncreaser.Execute(module);
         }

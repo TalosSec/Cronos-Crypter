@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime;
 
 namespace CronosCrypter.Obfuscator.Class
 {
@@ -120,8 +121,8 @@ namespace CronosCrypter.Obfuscator.Class
                         if (strings.Body.Instructions[i].OpCode == OpCodes.Ldstr)
                         {
                             // c# variable has for loop scope only
-                            String regString = strings.Body.Instructions[i].Operand.ToString();
-                            String encString = Convert.ToBase64String(UTF8Encoding.UTF8.GetBytes(regString));
+                            string regString = strings.Body.Instructions[i].Operand.ToString();
+                            string encString = Convert.ToBase64String(UTF8Encoding.UTF8.GetBytes(regString));
                             Console.WriteLine($"{regString} -> {encString}");
                             // methodology for adding code: write it in plain c#, compile, then view IL in dnspy
                             strings.Body.Instructions[i].OpCode = OpCodes.Nop; // errors occur if instruction not replaced with Nop

