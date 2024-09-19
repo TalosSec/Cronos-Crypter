@@ -17,7 +17,7 @@ namespace CronosCrypter.Obfuscator
         }
         public static string RandomCharacters(int length)
         {
-            const string chars = "🥰🤩😶‍🌫️🥴🥵🤔🤭🤕😳😜💘🗨️💣😿😣😵‍💫🫁🏳️‍⚧️🤵🏼‍♂️🪠";
+            const string chars = "👋🖐✋🖖👌🌂☂️👓🕶👔🧑🏽‍🦽‍🧘🏽‍♂️🧚🏽‍♀️🧑🏽‍🦯‍➡️";
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
