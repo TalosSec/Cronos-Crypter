@@ -23,12 +23,7 @@ namespace CronosCrypter.Forms
         bool mouseDown;
         private Point offset;
 
-        public Settings _settings;
         public Assembly _assemblySettings;
-        public AssemblyFrm(Settings settings)
-        {
-            _settings = settings;
-        }
 
         public AssemblyFrm(Assembly assembly)
         {
@@ -43,18 +38,6 @@ namespace CronosCrypter.Forms
             {
                 IconExtractor.Extract1stIconTo(source, fileStream);
             }
-        }
-        private void LoadCurrentSettings()
-        {
-            titleTxt.Text = (_assemblySettings.assemblyTitle ?? string.Empty);
-            productTxt.Text = (_assemblySettings.assemblyProductName ?? string.Empty);
-            descriptionTxt.Text = (_assemblySettings.assemblyDescription ?? string.Empty);
-            companyTxt.Text = (_assemblySettings.assemblyCompany ?? string.Empty);
-            productTxt.Text = (_assemblySettings.assemblyProductName ?? string.Empty);
-            copyrightTxt.Text = (_assemblySettings.assemblyCopyright ?? string.Empty);
-            versionTxt.Text = (_assemblySettings.assemblyVersion ?? "0.0.0.0");
-            iconBox.ImageLocation = (_assemblySettings.iconPath ?? string.Empty);
-            iconTxt.Text = (_assemblySettings.iconPath ?? string.Empty);
         }
 
         #endregion

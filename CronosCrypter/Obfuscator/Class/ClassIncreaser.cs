@@ -22,8 +22,6 @@ namespace CronosCrypter.Obfuscator.Class
 
             for (int i = 0; i < 50; i++)
             {
-                CilBody body;
-
                 var junkAttribute = new TypeDefUser(Randomize.RandomCharacters(15));
 
                 var bctor = new MethodDefUser(".ctor", MethodSig.CreateInstance(module.CorLibTypes.Void),
@@ -44,29 +42,29 @@ namespace CronosCrypter.Obfuscator.Class
                             MethodSig.CreateStatic(module.CorLibTypes.Int32, module.CorLibTypes.Int32, module.CorLibTypes.Int32),
                             methImplFlags, methFlags);
 
-                bctor.Body = body = new CilBody();
+                bctor.Body = new CilBody();
 
                 module.Types.Add(junkAttribute);
                 junkAttribute.Methods.Add(bctor);
                 junkAttribute.Methods.Add(method1);
                 junkAttribute.Fields.Add(field1);
 
-                method1.Body = body;
+                method1.Body = new CilBody();
                 method1.ParamDefs.Add(new ParamDefUser("a"));
                 method1.ParamDefs.Add(new ParamDefUser("b"));
 
-                body.Instructions.Add(OpCodes.Ldarg_0.ToInstruction());  
-                body.Instructions.Add(OpCodes.Ldarg_1.ToInstruction());  
+                method1.Body.Instructions.Add(OpCodes.Ldarg_0.ToInstruction());  
+                method1.Body.Instructions.Add(OpCodes.Ldarg_1.ToInstruction());  
 
                 var operations = new OpCode[] { OpCodes.Add, OpCodes.Sub, OpCodes.Mul };
-                var randomOp = operations[new Random().Next(operations.Length)];
+                var randomOp = operations[RandomNumberGenerator.GetInt32(operations.Length)];
 
-                body.Instructions.Add(randomOp.ToInstruction());
-                body.Instructions.Add(OpCodes.Stsfld.ToInstruction(field1));
-                body.Instructions.Add(OpCodes.Ldstr.ToInstruction(Randomize.RandomCharacters(20)));
-                body.Instructions.Add(OpCodes.Ldsfld.ToInstruction(field1));
-                body.Instructions.Add(OpCodes.Call.ToInstruction(writeLine));
-                body.Instructions.Add(OpCodes.Ret.ToInstruction());
+                method1.Body.Instructions.Add(randomOp.ToInstruction());
+                method1.Body.Instructions.Add(OpCodes.Stsfld.ToInstruction(field1));
+                method1.Body.Instructions.Add(OpCodes.Ldstr.ToInstruction(Randomize.RandomCharacters(20)));
+                method1.Body.Instructions.Add(OpCodes.Ldsfld.ToInstruction(field1));
+                method1.Body.Instructions.Add(OpCodes.Call.ToInstruction(writeLine));
+                method1.Body.Instructions.Add(OpCodes.Ret.ToInstruction());
             }
         }
     }

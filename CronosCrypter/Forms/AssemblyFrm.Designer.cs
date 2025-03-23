@@ -1,4 +1,3 @@
-﻿
 namespace CronosCrypter.Forms
 {
     partial class AssemblyFrm

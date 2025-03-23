@@ -2,8 +2,8 @@
   <h1>
       Cronos Crypter
   </h1>
-  <h4> Cronos Crypter is an obfuscation tool for .NET and Native files created for security researchers and people who are learning.
-    This application allows you to encrypt your payload to decrease scanners detection.</h4>
+  <h4> Cronos Crypter is an advanced obfuscation tool for .NET and Native files created for security researchers and people who are learning.
+    This application allows you to encrypt your payload to decrease scanners detection and includes advanced obfuscation techniques to make reverse engineering more difficult.</h4>
 </div>
 
 <div align="center">
@@ -26,11 +26,11 @@
   <br/>
  Execution delay
   <br/>
- Simple obfuscator
+ Advanced obfuscator with control flow obfuscation, metadata obfuscation, string encryption, anti-debugging techniques, and code virtualization
   <br/>
  Assembly cloner
   <br/>
- AMSI Bypass (In maintenance)
+ AMSI Bypass
   <br/>
  AntiVM
   <br/>
@@ -43,7 +43,7 @@
 
 The creators are not responsible for any actions or other damages caused, by this software.
 Crypter is intended for educational purposes only and should not be used for any illegal purposes.
-This software's purpose is not to be used malciously, or on other computer, who you are not an owner.
+This software's purpose is not to be used maliciously, or on other computers, who you are not an owner.
 By downloading and using this software, you agree to above disclaimer 
 
 ## License

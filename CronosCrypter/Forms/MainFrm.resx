@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ModernColorScheme" type="System.String, mscorlib">
+    <value>#2E3B4E</value>
+  </data>
+  <data name="ModernFont" type="System.String, mscorlib">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="ModernIcon" type="System.Drawing.Icon, System.Drawing">
+    <value>...</value>
+  </data>
+  <data name="ModernTooltip" type="System.String, mscorlib">
+    <value>Hover over elements for more information</value>
+  </data>
 </root>

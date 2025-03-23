@@ -30,8 +30,13 @@ namespace CronosCrypter.Core
         {
             byte[] encryptedBytes = null;
 
-            // TODO: Add random saltbytes generator
-            byte[] saltBytes = new byte[] { 054, 022, 153, 017 , 088, 055, 112, 212};
+            // Generate random salt bytes
+            byte[] saltBytes = new byte[8];
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(saltBytes);
+            }
+
             using (MemoryStream ms = new MemoryStream())              
             {
                 using (RijndaelManaged AES = new RijndaelManaged())

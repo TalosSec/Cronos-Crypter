@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime;
 
 namespace CronosCrypter.Obfuscator.Class
 {
@@ -169,6 +168,49 @@ namespace CronosCrypter.Obfuscator.Class
 
                 #endregion
             }
+
+            #region Control Flow Obfuscation
+
+            /// <summary>
+            /// Adds fake conditional statements, loops, and switch cases to obfuscate control flow
+            /// </summary>
+
+            foreach (TypeDef type in module.Types)
+            {
+                foreach (MethodDef method in type.Methods)
+                {
+                    if (!method.HasBody) continue;
+
+                    var body = method.Body;
+                    var instructions = body.Instructions;
+
+                    // Add fake conditional statements
+                    var fakeCondition = new Instruction(OpCodes.Ldc_I4_0);
+                    var fakeBranch = new Instruction(OpCodes.Brfalse, instructions[0]);
+                    instructions.Insert(0, fakeBranch);
+                    instructions.Insert(0, fakeCondition);
+
+                    // Add fake loop
+                    var loopStart = new Instruction(OpCodes.Nop);
+                    var loopEnd = new Instruction(OpCodes.Nop);
+                    instructions.Insert(0, loopEnd);
+                    instructions.Insert(0, new Instruction(OpCodes.Br, loopStart));
+                    instructions.Insert(0, loopStart);
+                    instructions.Insert(0, new Instruction(OpCodes.Ldc_I4_0));
+                    instructions.Insert(0, new Instruction(OpCodes.Brfalse, loopEnd));
+
+                    // Add fake switch case
+                    var switchStart = new Instruction(OpCodes.Nop);
+                    var switchEnd = new Instruction(OpCodes.Nop);
+                    instructions.Insert(0, switchEnd);
+                    instructions.Insert(0, new Instruction(OpCodes.Br, switchStart));
+                    instructions.Insert(0, switchStart);
+                    instructions.Insert(0, new Instruction(OpCodes.Ldc_I4_0));
+                    instructions.Insert(0, new Instruction(OpCodes.Switch, new Instruction[] { switchEnd }));
+                }
+            }
+
+            #endregion
         }
     }
 }

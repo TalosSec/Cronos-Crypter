@@ -33,6 +33,7 @@ namespace CronosCrypter
 
         // Settings
         private Settings settings;
+        private CancellationTokenSource cancellationTokenSource;
 
         public MainFrm()
         {
@@ -40,6 +41,7 @@ namespace CronosCrypter
             SetupFoldername();
             runpeTypeBox.Text = "RegAsm";
             encryptionTypeBox.Text = "AES";
+            cancellationTokenSource = new CancellationTokenSource();
         }
 
         #region Panels
@@ -209,7 +211,7 @@ namespace CronosCrypter
             });
             thread.Start();
             thread.Join();
-            thread.Abort();
+            cancellationTokenSource.Cancel();
             return Convert.ToBoolean(bld);
         }
 

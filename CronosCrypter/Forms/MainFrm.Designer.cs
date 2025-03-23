@@ -1,4 +1,3 @@
-﻿
 namespace CronosCrypter
 {
     partial class MainFrm
@@ -37,7 +36,6 @@ namespace CronosCrypter
             this.buildBtn = new System.Windows.Forms.Button();
             this.sleepChk = new System.Windows.Forms.CheckBox();
             this.antiVM = new System.Windows.Forms.CheckBox();
-            this.amsiBox = new System.Windows.Forms.CheckBox();
             this.schtasksChk = new System.Windows.Forms.CheckBox();
             this.regeditChk = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -88,7 +86,6 @@ namespace CronosCrypter
             this.topPanel.Controls.Add(this.buildBtn);
             this.topPanel.Controls.Add(this.sleepChk);
             this.topPanel.Controls.Add(this.antiVM);
-            this.topPanel.Controls.Add(this.amsiBox);
             this.topPanel.Controls.Add(this.schtasksChk);
             this.topPanel.Controls.Add(this.regeditChk);
             this.topPanel.Controls.Add(this.label13);
@@ -204,18 +201,6 @@ namespace CronosCrypter
             this.antiVM.TabIndex = 29;
             this.antiVM.Text = "AntiVM";
             this.antiVM.UseVisualStyleBackColor = true;
-            // 
-            // amsiBox
-            // 
-            this.amsiBox.AutoSize = true;
-            this.amsiBox.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.amsiBox.ForeColor = System.Drawing.Color.White;
-            this.amsiBox.Location = new System.Drawing.Point(161, 529);
-            this.amsiBox.Name = "amsiBox";
-            this.amsiBox.Size = new System.Drawing.Size(97, 21);
-            this.amsiBox.TabIndex = 28;
-            this.amsiBox.Text = "AMSI Bypass";
-            this.amsiBox.UseVisualStyleBackColor = true;
             // 
             // schtasksChk
             // 
@@ -548,7 +533,6 @@ namespace CronosCrypter
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox filenameTxt;
-        private System.Windows.Forms.CheckBox amsiBox;
         private System.Windows.Forms.CheckBox schtasksChk;
         private System.Windows.Forms.CheckBox regeditChk;
         private System.Windows.Forms.Label label13;
@@ -571,4 +555,3 @@ namespace CronosCrypter
         private System.Windows.Forms.LinkLabel TalosSec;
     }
 }
-

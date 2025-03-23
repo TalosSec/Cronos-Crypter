@@ -60,7 +60,8 @@ namespace CronosCrypter.Obfuscator.String
         static string SplitString(string str)
         {
             // Example: split the string into groups of 3 characters
-            int splitSize = 3;
+            Random random = new Random();
+            int splitSize = random.Next(2, 5); // Variable split size between 2 and 4
             string result = "";
 
             for (int i = 0; i < str.Length; i += splitSize)
